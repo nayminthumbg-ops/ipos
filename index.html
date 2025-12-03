@@ -64,6 +64,15 @@
         .hero-glow {
             box-shadow: 0 0 50px -12px rgba(59, 130, 246, 0.5);
         }
+        
+        /* Animation for Demo Badge */
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
     </style>
 </head>
 <body class="bg-brand-dark text-brand-text antialiased">
@@ -98,6 +107,17 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Demo Version Notification Badge (Updated to Link to Contact) -->
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-primary/30 text-brand-primary text-sm font-semibold mb-8 animate-pulse-soft shadow-lg shadow-blue-500/10 cursor-pointer hover:bg-brand-card/80 transition group">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-primary"></span>
+                </span>
+                <span>Demo Version ကို အခမဲ့ စမ်းသပ်အသုံးပြုနိုင်ပါပြီ</span>
+                <i class="fa-solid fa-arrow-down text-xs ml-1 group-hover:translate-y-1 transition-transform"></i>
+            </a>
+
             <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-burmese-loose">
                 Mobile ဖုန်းဆိုင်များအတွက် <br>
                 <span class="gradient-text leading-burmese-loose block mt-2">အကောင်းဆုံး စီမံခန့်ခွဲမှု စနစ်</span>
@@ -111,8 +131,10 @@
                 <a href="#contact" class="px-8 py-4 bg-brand-success hover:bg-green-600 rounded-lg font-bold text-lg transition shadow-lg shadow-green-500/30 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-cart-shopping"></i> <span class="pt-1">အခုပဲ ဝယ်ယူမည်</span>
                 </a>
-                <a href="#features" class="px-8 py-4 bg-brand-card hover:bg-gray-700 border border-gray-700 rounded-lg font-bold text-lg transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-list-check"></i> <span class="pt-1">အသေးစိတ်ကြည့်ရန်</span>
+                
+                <!-- Changed back to View Details as requested -->
+                <a href="#features" class="px-8 py-4 bg-brand-card hover:bg-gray-700 border border-gray-700 rounded-lg font-bold text-lg transition flex items-center justify-center gap-2 group">
+                    <i class="fa-solid fa-list-check group-hover:text-brand-primary transition"></i> <span class="pt-1">အသေးစိတ်ကြည့်ရန်</span>
                 </a>
             </div>
 
@@ -128,15 +150,15 @@
                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl z-10 opacity-80 group-hover:opacity-100 transition duration-500">
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-green-500">
                             <div class="text-xs text-gray-400">Total Income</div>
-                            <div class="text-xl font-bold text-green-400">MMK 95,000</div>
+                            <div class="text-xl font-bold text-green-400">MMK 75,000</div>
                         </div>
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-yellow-500">
                             <div class="text-xs text-gray-400">Total Expense</div>
-                            <div class="text-xl font-bold text-yellow-400">MMK 0</div>
+                            <div class="text-xl font-bold text-yellow-400">MMK 5000</div>
                         </div>
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-blue-500">
                             <div class="text-xs text-gray-400">Net Profit</div>
-                            <div class="text-xl font-bold text-blue-400">MMK 95,000</div>
+                            <div class="text-xl font-bold text-blue-400">MMK 65,000</div>
                         </div>
                      </div>
                 </div>
@@ -255,9 +277,12 @@
                     <div class="md:w-1/2 flex justify-center">
                         <div class="bg-black/40 p-8 rounded-xl border border-gray-600 backdrop-blur-sm text-center w-full max-w-sm">
                             <h3 class="text-4xl font-bold text-brand-primary mb-3">ပရိုမိုးရှင်းကာလ</h3>
-                            <p class="text-base text-gray-400 mb-6">မူရင်းစျေးနှုန်း 150000ကျပ်မှ အထူးစျေးနှုန်း</p>
+                            <!-- Updated Price with Strikethrough -->
+                            <p class="text-base text-gray-400 mb-6 leading-burmese-relaxed">
+                                မူရင်းစျေးနှုန်း <span class="line-through text-gray-500 decoration-red-500 decoration-2">150,000</span> ကျပ်မှ အထူးစျေးနှုန်း
+                            </p>
                             <div class="text-5xl font-bold text-white mb-4">
-                                <span class="text-2xl align-top">MMK</span> 75000
+                                <span class="text-2xl align-top">MMK</span> 75,000
                             </div>
                             <p class="text-green-400 text-base font-semibold">Special Offer Available!</p>
                         </div>
@@ -274,8 +299,7 @@
             
             <!-- Changed layout to 3 columns to accommodate Viber and Telegram -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Messenger Button (Replaced href with m.me link placeholder) -->
-                <!-- NOTE: Replace 'YourPageID' with your actual Facebook Page ID or Username -->
+                <!-- Messenger Button -->
                 <a href="https://m.me/matgteams" target="_blank" class="bg-blue-600 hover:bg-blue-700 p-6 rounded-xl transition flex flex-col items-center justify-center gap-4 group">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
                         <i class="fa-brands fa-facebook-messenger text-3xl text-white"></i>
@@ -287,7 +311,6 @@
                 </a>
                 
                 <!-- Viber Button -->
-                <!-- NOTE: Replace '959xxxxxxxxx' with your phone number -->
                 <a href="viber://chat?number=+959425287090" class="bg-purple-600 hover:bg-purple-700 p-6 rounded-xl transition flex flex-col items-center justify-center gap-4 group">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
                         <i class="fa-brands fa-viber text-3xl text-white"></i>
@@ -306,7 +329,7 @@
                     </div>
                     <div class="text-center">
                         <div class="text-sm text-sky-100">Chat via Telegram</div>
-                        <div class="font-bold text-lg">Username</div>
+                        <div class="font-bold text-lg">matgteams</div>
                     </div>
                 </a>
             </div>
@@ -323,5 +346,4 @@
     </footer>
 
 </body>
-
 </html>
