@@ -85,15 +85,18 @@
                     <i class="fa-solid fa-mobile-screen-button text-3xl text-brand-primary"></i>
                     <span class="text-2xl font-bold tracking-wide">iPOS <span class="text-brand-success">Tool Pro</span></span>
                 </div>
-                <!-- Updated Nav Links to Button Style -->
-                <div class="hidden md:flex space-x-4 text-sm font-medium">
-                    <a href="#features" class="px-5 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
+                <!-- Updated Nav Links with Download Button -->
+                <div class="hidden lg:flex space-x-3 text-sm font-medium">
+                    <a href="#download" class="px-4 py-2 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary hover:bg-brand-primary hover:text-white transition duration-300 flex items-center">
+                        <i class="fa-solid fa-cloud-arrow-down mr-2"></i> ဒေါင်းလုဒ်
+                    </a>
+                    <a href="#features" class="px-4 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
                         လုပ်ဆောင်ချက်များ
                     </a>
-                    <a href="#screenshots" class="px-5 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
+                    <a href="#screenshots" class="px-4 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
                         ပုံစံနမူနာများ
                     </a>
-                    <a href="#pricing" class="px-5 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
+                    <a href="#pricing" class="px-4 py-2 rounded-full border border-gray-700 bg-gray-800/50 hover:bg-gray-700 hover:border-brand-primary/50 hover:text-white transition duration-300 flex items-center">
                         ဈေးနှုန်း
                     </a>
                 </div>
@@ -108,8 +111,8 @@
     <section class="pt-32 pb-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <!-- Demo Version Notification Badge (Updated to Link to Contact) -->
-            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-primary/30 text-brand-primary text-sm font-semibold mb-8 animate-pulse-soft shadow-lg shadow-blue-500/10 cursor-pointer hover:bg-brand-card/80 transition group">
+            <!-- Demo Version Notification Badge (Links to Download Section) -->
+            <a href="#download" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-primary/30 text-brand-primary text-sm font-semibold mb-8 animate-pulse-soft shadow-lg shadow-blue-500/10 cursor-pointer hover:bg-brand-card/80 transition group">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-primary"></span>
@@ -132,7 +135,6 @@
                     <i class="fa-solid fa-cart-shopping"></i> <span class="pt-1">အခုပဲ ဝယ်ယူမည်</span>
                 </a>
                 
-                <!-- Changed back to View Details as requested -->
                 <a href="#features" class="px-8 py-4 bg-brand-card hover:bg-gray-700 border border-gray-700 rounded-lg font-bold text-lg transition flex items-center justify-center gap-2 group">
                     <i class="fa-solid fa-list-check group-hover:text-brand-primary transition"></i> <span class="pt-1">အသေးစိတ်ကြည့်ရန်</span>
                 </a>
@@ -150,18 +152,58 @@
                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl z-10 opacity-80 group-hover:opacity-100 transition duration-500">
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-green-500">
                             <div class="text-xs text-gray-400">Total Income</div>
-                            <div class="text-xl font-bold text-green-400">MMK 75,000</div>
+                            <div class="text-xl font-bold text-green-400">MMK 95,000</div>
                         </div>
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-yellow-500">
                             <div class="text-xs text-gray-400">Total Expense</div>
-                            <div class="text-xl font-bold text-yellow-400">MMK 5000</div>
+                            <div class="text-xl font-bold text-yellow-400">MMK 0</div>
                         </div>
                         <div class="bg-gray-800 p-4 rounded border-l-4 border-blue-500">
                             <div class="text-xs text-gray-400">Net Profit</div>
-                            <div class="text-xl font-bold text-blue-400">MMK 65,000</div>
+                            <div class="text-xl font-bold text-blue-400">MMK 95,000</div>
                         </div>
                      </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section (New) -->
+    <section id="download" class="py-16 bg-brand-card/30 border-y border-gray-800/50 scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 leading-burmese-relaxed text-white">Software ဒေါင်းလုဒ်ရယူရန်</h2>
+            <p class="text-brand-muted mb-10 leading-burmese-relaxed">Version 1.15.7 (Latest Update) ကို မိမိနှစ်သက်ရာ Link မှတဆင့် ဒေါင်းလုဒ်ဆွဲနိုင်ပါသည်။</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <!-- Google Drive Button -->
+                <!-- NOTE: Replace href="#" with your Google Drive Link -->
+                <a href="https://drive.google.com/file/d/1Vz7i3cm9usV8Std97A6thXJEhTG7SjNR/view?usp=drive_link" target="_blank" class="flex items-center justify-between p-5 rounded-xl bg-gray-800 border border-gray-700 hover:border-blue-500 hover:bg-gray-750 transition group shadow-lg hover:shadow-blue-500/10">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
+                            <i class="fa-brands fa-google-drive text-3xl text-green-400"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Download via</div>
+                            <div class="font-bold text-lg text-white group-hover:text-blue-400 transition">Google Drive</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition"></i>
+                </a>
+
+                <!-- Mega Button -->
+                <!-- NOTE: Replace href="#" with your Mega Link -->
+                <a href="https://mega.nz/file/yQt0kbqb#7YyPTrI2vwxj-AxveGP90us7zKEnh_va4kZUyAHDq0A" target="_blank" class="flex items-center justify-between p-5 rounded-xl bg-gray-800 border border-gray-700 hover:border-red-500 hover:bg-gray-750 transition group shadow-lg hover:shadow-red-500/10">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
+                            <i class="fa-solid fa-cloud-arrow-down text-3xl text-red-500"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Download via</div>
+                            <div class="font-bold text-lg text-white group-hover:text-red-400 transition">Mega Cloud</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -322,14 +364,13 @@
                 </a>
 
                 <!-- Telegram Button -->
-                <!-- NOTE: Replace 'YourUsername' with your Telegram username or phone number -->
                 <a href="https://t.me/matgteams" target="_blank" class="bg-sky-500 hover:bg-sky-600 p-6 rounded-xl transition flex flex-col items-center justify-center gap-4 group">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
                         <i class="fa-brands fa-telegram text-3xl text-white"></i>
                     </div>
                     <div class="text-center">
                         <div class="text-sm text-sky-100">Chat via Telegram</div>
-                        <div class="font-bold text-lg">matgteams</div>
+                        <div class="font-bold text-lg">Username</div>
                     </div>
                 </a>
             </div>
