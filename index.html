@@ -73,6 +73,28 @@
         .animate-pulse-soft {
             animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+        
+        /* Mobile Device Mockup Styling */
+        .mobile-mockup {
+            border: 12px solid #1e293b;
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .mobile-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1.5rem;
+            width: 40%;
+            background: #1e293b;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            z-index: 20;
+        }
     </style>
 </head>
 <body class="bg-brand-dark text-brand-text antialiased">
@@ -85,7 +107,7 @@
                     <i class="fa-solid fa-mobile-screen-button text-3xl text-brand-primary"></i>
                     <span class="text-2xl font-bold tracking-wide">iPOS <span class="text-brand-success">Tool Pro</span></span>
                 </div>
-                <!-- Updated Nav Links with Download Button -->
+                <!-- Nav Links -->
                 <div class="hidden lg:flex space-x-3 text-sm font-medium">
                     <a href="#download" class="px-4 py-2 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary hover:bg-brand-primary hover:text-white transition duration-300 flex items-center">
                         <i class="fa-solid fa-cloud-arrow-down mr-2"></i> ဒေါင်းလုဒ်
@@ -111,13 +133,13 @@
     <section class="pt-32 pb-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <!-- Demo Version Notification Badge (Links to Download Section) -->
+            <!-- Badge -->
             <a href="#download" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-primary/30 text-brand-primary text-sm font-semibold mb-8 animate-pulse-soft shadow-lg shadow-blue-500/10 cursor-pointer hover:bg-brand-card/80 transition group">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-primary"></span>
                 </span>
-                <span>Demo Version ကို အခမဲ့ စမ်းသပ်အသုံးပြုနိုင်ပါပြီ</span>
+                <span>Android Version အသစ် ထွက်ရှိပါပြီ</span>
                 <i class="fa-solid fa-arrow-down text-xs ml-1 group-hover:translate-y-1 transition-transform"></i>
             </a>
 
@@ -126,8 +148,8 @@
                 <span class="gradient-text leading-burmese-loose block mt-2">အကောင်းဆုံး စီမံခန့်ခွဲမှု စနစ်</span>
             </h1>
             <p class="text-lg md:text-xl text-brand-muted mb-12 max-w-3xl mx-auto leading-burmese-relaxed">
-                စာရင်းဇယားတွေရှုပ်ထွေးနေပါသလား? iPOS Tool Pro (Version 1.15.7) က ကူညီဖြေရှင်းပေးဖို့ အသင့်ရှိနေပါပြီ။ 
-                Service, Inventory, Top-up အားလုံးကို တစ်နေရာတည်းမှာ စီမံခန့်ခွဲလိုက်ပါ။
+                စာရင်းဇယားတွေရှုပ်ထွေးနေပါသလား? iPOS Tool Pro (Windows & Android) က ကူညီဖြေရှင်းပေးဖို့ အသင့်ရှိနေပါပြီ။ 
+                Service, Inventory, Top-up အားလုံးကို ဖုန်းနှင့် ကွန်ပျူတာ နှစ်မျိုးလုံးတွင် စီမံခန့်ခွဲလိုက်ပါ။
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
@@ -140,70 +162,163 @@
                 </a>
             </div>
 
-            <!-- Mockup/Hero Image Representation (Linked as Screenshots) -->
-            <div id="screenshots" class="scroll-mt-24 relative mx-auto max-w-5xl rounded-xl overflow-hidden shadow-2xl hero-glow border border-gray-800 bg-brand-card p-2 md:p-4">
-                <!-- Using a structured HTML representation of the dashboard instead of an external image to ensure it works offline/without assets -->
-                <div class="bg-[#0f172a] rounded-lg p-6 border border-gray-800 text-left relative overflow-hidden h-64 md:h-96 flex flex-col items-center justify-center group">
-                     <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-                     <h3 class="text-3xl font-bold mb-4 z-10">Dashboard Preview</h3>
-                     <p class="text-brand-muted mb-6 z-10 text-center max-w-lg leading-burmese-relaxed">ဝင်ငွေ၊ ထွက်ငွေ၊ အမြတ်အစွန်းများနှင့် ဖုန်း Service အခြေအနေများကို တစ်နေရာတည်းတွင် ကြည့်ရှုနိုင်သော Dashboard</p>
-                     
-                     <!-- Animated Elements mimicking the UI -->
-                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl z-10 opacity-80 group-hover:opacity-100 transition duration-500">
-                        <div class="bg-gray-800 p-4 rounded border-l-4 border-green-500">
-                            <div class="text-xs text-gray-400">Total Income</div>
-                            <div class="text-xl font-bold text-green-400">MMK 95,000</div>
+            <!-- New Hybrid Mockup: Desktop + Mobile (Optimized for Responsive Stacking) -->
+            <div class="relative max-w-6xl mx-auto">
+                <div class="flex flex-col items-center md:flex-row md:items-end md:justify-center gap-8 md:gap-4">
+                    
+                    <!-- Windows Dashboard Mockup -->
+                    <div id="screenshots" class="scroll-mt-24 relative rounded-xl overflow-hidden shadow-2xl hero-glow border border-gray-800 bg-brand-card p-2 md:p-4 w-full md:w-3/4 z-10">
+                        <div class="bg-[#0f172a] rounded-lg p-6 border border-gray-800 text-left relative overflow-hidden h-64 md:h-96 flex flex-col items-center justify-center group">
+                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                            
+                            <!-- Window Controls -->
+                            <div class="absolute top-4 right-4 flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+
+                            <h3 class="text-3xl font-bold mb-4 z-10">Windows Dashboard</h3>
+                            <p class="text-brand-muted mb-6 z-10 text-center max-w-lg leading-burmese-relaxed">ဝင်ငွေ၊ ထွက်ငွေ၊ အမြတ်အစွန်းများနှင့် Service စာရင်းများကို အသေးစိတ်ကြည့်ရှုနိုင်ခြင်း</p>
+                            
+                            <!-- Animated Elements -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl z-10 opacity-80 group-hover:opacity-100 transition duration-500">
+                                <div class="bg-gray-800 p-4 rounded border-l-4 border-green-500">
+                                    <div class="text-xs text-gray-400">Total Income</div>
+                                    <div class="text-xl font-bold text-green-400">MMK 95,000</div>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded border-l-4 border-yellow-500">
+                                    <div class="text-xs text-gray-400">Total Expense</div>
+                                    <div class="text-xl font-bold text-yellow-400">MMK 0</div>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded border-l-4 border-blue-500">
+                                    <div class="text-xs text-gray-400">Net Profit</div>
+                                    <div class="text-xl font-bold text-blue-400">MMK 95,000</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 p-4 rounded border-l-4 border-yellow-500">
-                            <div class="text-xs text-gray-400">Total Expense</div>
-                            <div class="text-xl font-bold text-yellow-400">MMK 0</div>
+                    </div>
+
+                    <!-- Mobile Mockup (Adjusted Layout: Stacked on Mobile, Overlaid on Desktop) -->
+                    <div class="w-56 md:w-64 -mt-4 md:-ml-12 md:mb-8 z-20 transform md:rotate-3 hover:rotate-0 transition duration-500">
+                        <div class="mobile-mockup bg-white h-[450px] md:h-[500px] w-full relative">
+                            <div class="mobile-notch"></div>
+                            <div class="absolute inset-0 bg-gray-50 flex flex-col pt-8 px-3 pb-4">
+                                <!-- Mobile Header -->
+                                <div class="flex justify-between items-center mb-4 px-1">
+                                    <i class="fa-solid fa-bars text-gray-600"></i>
+                                    <span class="font-bold text-brand-primary text-sm">iPOS Mobile</span>
+                                    <i class="fa-solid fa-bell text-gray-600"></i>
+                                </div>
+                                <!-- Mobile Cards -->
+                                <div class="grid grid-cols-2 gap-2 mb-4">
+                                    <div class="bg-blue-50 p-3 rounded-xl border border-blue-100">
+                                        <i class="fa-solid fa-money-bill-wave text-blue-500 mb-1"></i>
+                                        <div class="text-[10px] text-gray-500">Income</div>
+                                        <div class="text-xs font-bold text-gray-800">95,000</div>
+                                    </div>
+                                    <div class="bg-green-50 p-3 rounded-xl border border-green-100">
+                                        <i class="fa-solid fa-arrow-trend-up text-green-500 mb-1"></i>
+                                        <div class="text-[10px] text-gray-500">Profit</div>
+                                        <div class="text-xs font-bold text-gray-800">95,000</div>
+                                    </div>
+                                </div>
+                                <!-- Mobile Menu List -->
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm border border-gray-100">
+                                        <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-500"><i class="fa-solid fa-cart-shopping text-xs"></i></div>
+                                        <div class="text-xs font-medium text-gray-700">Sale Entry</div>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm border border-gray-100">
+                                        <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-500"><i class="fa-solid fa-wrench text-xs"></i></div>
+                                        <div class="text-xs font-medium text-gray-700">Service</div>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm border border-gray-100">
+                                        <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center text-teal-500"><i class="fa-solid fa-boxes-stacked text-xs"></i></div>
+                                        <div class="text-xs font-medium text-gray-700">Inventory</div>
+                                    </div>
+                                </div>
+                                <!-- Bottom Nav -->
+                                <div class="mt-auto flex justify-around text-gray-400 border-t pt-2">
+                                    <i class="fa-solid fa-house text-blue-500"></i>
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 p-4 rounded border-l-4 border-blue-500">
-                            <div class="text-xs text-gray-400">Net Profit</div>
-                            <div class="text-xl font-bold text-blue-400">MMK 95,000</div>
-                        </div>
-                     </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
+    <!-- Download Section (Layout Fixed) -->
     <section id="download" class="py-16 bg-brand-card/30 border-y border-gray-800/50 scroll-mt-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4 leading-burmese-relaxed text-white">Software ဒေါင်းလုဒ်ရယူရန်</h2>
-            <p class="text-brand-muted mb-10 leading-burmese-relaxed">Version 1.15.7 (Latest Update) ကို မိမိနှစ်သက်ရာ Link မှတဆင့် ဒေါင်းလုဒ်ဆွဲနိုင်ပါသည်။</p>
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4 leading-burmese-relaxed text-white">Software ဒေါင်းလုဒ်ရယူရန်</h2>
+                <p class="text-brand-muted mb-6 leading-burmese-relaxed">မိမိအသုံးပြုမည့် Device (Windows သို့မဟုတ် Android) အလိုက် ရွေးချယ်ဒေါင်းလုဒ်ဆွဲနိုင်ပါသည်။</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                <!-- Google Drive Button -->
-                <!-- NOTE: Replace href="#" with your Google Drive Link -->
-                <a href="https://drive.google.com/file/d/1K7q2uHBTE-TYUnU11FxqN5sqZzISmEwP/view?usp=sharing" target="_blank" class="flex items-center justify-between p-5 rounded-xl bg-gray-800 border border-gray-700 hover:border-blue-500 hover:bg-gray-750 transition group shadow-lg hover:shadow-blue-500/10">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
-                            <i class="fa-brands fa-google-drive text-3xl text-green-400"></i>
-                        </div>
-                        <div class="text-left">
-                            <div class="text-xs text-gray-400 uppercase tracking-wider">Download via</div>
-                            <div class="font-bold text-lg text-white group-hover:text-blue-400 transition">Google Drive</div>
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Windows Section -->
+                <div class="bg-gray-800/40 p-6 md:p-8 rounded-2xl border border-gray-700 h-full flex flex-col">
+                    <div class="flex items-center gap-3 mb-6 border-b border-gray-700 pb-4">
+                        <i class="fa-brands fa-windows text-3xl text-blue-400"></i>
+                        <h3 class="text-xl font-bold text-white">Windows Version (PC)</h3>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition"></i>
-                </a>
+                    <div class="space-y-4 mt-auto">
+                        <a href="https://drive.google.com/file/d/1K7q2uHBTE-TYUnU11FxqN5sqZzISmEwP/view?usp=sharing" target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-gray-900 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition group">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-white/10 p-2 rounded-lg"><i class="fa-brands fa-google-drive text-2xl text-green-400"></i></div>
+                                <div>
+                                    <div class="text-xs text-gray-400">Download via</div>
+                                    <div class="font-bold text-white group-hover:text-blue-400 transition">Google Drive</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-download text-gray-500 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://mega.nz/file/yA1UBJ7Y#fFRDxKdkeLxGZdMgH08bPWhq-B3YwYQZbl9hCrZDjtg" target="_blank" class="flex items-center justify-between p-4 rounded-xl bg-gray-900 border border-gray-700 hover:border-red-500 hover:bg-gray-800 transition group">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-white/10 p-2 rounded-lg"><i class="fa-solid fa-cloud text-2xl text-red-500"></i></div>
+                                <div>
+                                    <div class="text-xs text-gray-400">Download via</div>
+                                    <div class="font-bold text-white group-hover:text-red-400 transition">Mega Cloud</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-download text-gray-500 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
 
-                <!-- Mega Button -->
-                <!-- NOTE: Replace href="#" with your Mega Link -->
-                <a href="https://mega.nz/file/yA1UBJ7Y#fFRDxKdkeLxGZdMgH08bPWhq-B3YwYQZbl9hCrZDjtg" target="_blank" class="flex items-center justify-between p-5 rounded-xl bg-gray-800 border border-gray-700 hover:border-red-500 hover:bg-gray-750 transition group shadow-lg hover:shadow-red-500/10">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
-                            <i class="fa-solid fa-cloud-arrow-down text-3xl text-red-500"></i>
-                        </div>
-                        <div class="text-left">
-                            <div class="text-xs text-gray-400 uppercase tracking-wider">Download via</div>
-                            <div class="font-bold text-lg text-white group-hover:text-red-400 transition">Mega Cloud</div>
-                        </div>
+                <!-- Android Section (Fixed Visibility Issue) -->
+                <div class="bg-gradient-to-br from-green-900/20 to-gray-800/40 p-6 md:p-8 rounded-2xl border border-green-500/30 relative overflow-hidden group h-full flex flex-col">
+                    <div class="absolute top-0 right-0 bg-green-600 text-xs font-bold text-white px-3 py-1 rounded-bl-lg">New Arrival</div>
+                    
+                    <div class="flex items-center gap-3 mb-6 border-b border-gray-700 pb-4">
+                        <i class="fa-brands fa-android text-3xl text-green-400"></i>
+                        <h3 class="text-xl font-bold text-white">Android Version (Mobile)</h3>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition"></i>
-                </a>
+                    
+                    <div class="flex flex-col flex-grow">
+                        <p class="text-brand-muted text-sm mb-8 leading-relaxed">
+                            ဖုန်းဆိုင်လုပ်ငန်းများကို မိမိဖုန်းထဲမှ တိုက်ရိုက်စီမံနိုင်မည့် Mobile App ဖြစ်ပါသည်။ PlayStore တွင်မကြာမီလာမည်။ ယခု Direct APK ဒေါင်းလုဒ်ရယူနိုင်ပါသည်။
+                        </p>
+                        
+                        <!-- APK Download Button (Ensured Visibility with margin-top auto) -->
+                        <a href="https://mega.nz/file/XI9HjLAJ#uqE8dpjkSRuD0LR0pqPXtT3F1qgWMZJLd03QvbELvfk" target="_blank" class="mt-auto flex items-center justify-between p-4 rounded-xl bg-green-600/20 border border-green-500/50 hover:bg-green-600 hover:text-white transition group cursor-pointer shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-green-500 p-2 rounded-lg text-white group-hover:bg-white group-hover:text-green-600 transition"><i class="fa-solid fa-robot text-2xl"></i></div>
+                                <div>
+                                    <div class="text-xs text-green-200 group-hover:text-green-100">Direct Download</div>
+                                    <div class="font-bold text-green-400 group-hover:text-white transition">iPOS_Tool_Pro.apk</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-circle-down text-2xl text-green-400 group-hover:text-white animate-bounce"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -275,36 +390,52 @@
                 <!-- Feature 6 -->
                 <div class="bg-brand-card p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 hover:border-indigo-500/50 group">
                     <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition">
-                        <i class="fa-solid fa-print text-2xl text-indigo-400"></i>
+                        <i class="fa-brands fa-android text-2xl text-indigo-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">POS Printing</h3>
+                    <h3 class="text-xl font-bold mb-4">Android Mobile App</h3>
                     <p class="text-brand-muted leading-burmese-relaxed">
-                        58mm/80mm Thermal Printer များဖြင့် ဘောင်ချာများကို သပ်ရပ်စွာ ထုတ်ပေးနိုင်ခြင်း။ ဆိုင် Logo နှင့် လိပ်စာများ ထည့်သွင်းနိုင်ခြင်း။
+                        ကွန်ပျူတာမလိုဘဲ ဖုန်းဖြင့် အရောင်းစာရင်းသွင်းခြင်း၊ လက်ကျန်စစ်ခြင်းများကို နေရာမရွေး အချိန်မရွေး လုပ်ဆောင်နိုင်မည့် Mobile App ပါဝင်လာပါပြီ။
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW: Video Tutorial Section -->
+    <!-- Video Tutorial Section -->
     <section id="tutorial" class="py-20 bg-brand-card/30 border-y border-gray-800/50 scroll-mt-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6 leading-burmese-relaxed text-white">အသုံးပြုနည်း လမ်းညွှန် (Video Tutorial)</h2>
-            <p class="text-brand-muted mb-10 leading-burmese-relaxed">iPOS Tool Pro ကို စနစ်တကျ အသုံးပြုနည်းများကို အောက်ပါ ဗီဒီယိုတွင် လေ့လာနိုင်ပါသည်။</p>
+            <p class="text-brand-muted mb-10 leading-burmese-relaxed">Software အသုံးပြုနည်းများကို Windows နှင့် Android အတွက် သီးခြားစီ လေ့လာနိုင်ပါသည်။</p>
             
-            <div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
-                <!-- IMPORTANT: Replace the src URL with your actual YouTube Embed Link -->
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/ix7h0U1OqT0" title="iPOS Tool Pro Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Windows Video -->
+                <div class="bg-gray-800/50 p-4 rounded-2xl border border-gray-700">
+                    <h3 class="text-left font-bold mb-3 flex items-center gap-2 text-white"><i class="fa-brands fa-windows text-blue-400"></i> Windows PC Version</h3>
+                    <div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ix7h0U1OqT0" title="iPOS Tool Pro Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Android Video (Updated) -->
+                <div class="bg-gray-800/50 p-4 rounded-2xl border border-gray-700">
+                    <h3 class="text-left font-bold mb-3 flex items-center gap-2 text-white"><i class="fa-brands fa-android text-green-400"></i> Android Mobile Version</h3>
+                    <div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <!-- Updated YouTube Iframe -->
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/pi5iUvHnP9I?si=wGBg276pTOoYusjP" title="iPOS Tool Pro Android Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us (Includes Pricing) -->
+    <!-- Pricing Section (Updated with Split Pricing) -->
     <section id="pricing" class="py-20 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-r from-blue-900/40 to-green-900/40 rounded-3xl p-8 md:p-16 border border-gray-700 relative overflow-hidden">
-                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
-                    <div class="md:w-1/2">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    
+                    <!-- Why Choose Us List -->
+                    <div class="lg:w-5/12">
                         <h2 class="text-3xl font-bold mb-8 leading-burmese-relaxed">ဘာကြောင့် iPOS Tool Pro ကို ရွေးချယ်သင့်တာလဲ?</h2>
                         <ul class="space-y-6">
                             <li class="flex items-start space-x-3">
@@ -313,7 +444,7 @@
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fa-solid fa-circle-check text-green-400 mt-2"></i>
-                                <span class="leading-burmese-relaxed pt-1">အသုံးပြုရ လွယ်ကူသော User Interface (UI)</span>
+                                <span class="leading-burmese-relaxed pt-1">Window နှင့် Android နှစ်မျိုးလုံး အသုံးပြုနိုင်ခြင်း</span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i class="fa-solid fa-circle-check text-green-400 mt-2"></i>
@@ -329,16 +460,44 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- Updated Pricing Card (Normal Price) -->
-                    <div class="md:w-1/2 flex justify-center">
-                        <div class="bg-black/40 p-8 rounded-xl border border-gray-600 backdrop-blur-sm text-center w-full max-w-sm">
-                            <h3 class="text-3xl font-bold text-brand-primary mb-6">Software ဈေးနှုန်း</h3>
-                            
-                            <div class="text-5xl font-bold text-white mb-4">
-                                <span class="text-2xl align-top">MMK</span> 220,000
+
+                    <!-- Pricing Cards (New Split Layout) -->
+                    <div class="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        
+                        <!-- Windows Price Card -->
+                        <div class="bg-gray-900/80 p-6 rounded-2xl border border-blue-500/30 shadow-lg relative overflow-hidden transform hover:scale-105 transition duration-300">
+                            <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Best Seller</div>
+                            <div class="mb-4">
+                                <i class="fa-brands fa-windows text-4xl text-blue-500"></i>
                             </div>
-                            <p class="text-brand-muted text-base">Lifetime License</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Windows Version</h3>
+                            <p class="text-gray-400 text-xs mb-4">For PC & Laptop</p>
+                            <div class="text-3xl font-bold text-white mb-2">
+                                220,000 <span class="text-sm font-normal text-gray-500">MMK</span>
+                            </div>
+                            <p class="text-brand-muted text-[10px] uppercase tracking-wider mb-6">Lifetime License</p>
+                            <a href="#contact" class="block w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-center rounded-lg font-bold transition">
+                                ဝယ်ယူရန်
+                            </a>
                         </div>
+
+                        <!-- Android Price Card -->
+                        <div class="bg-gray-900/80 p-6 rounded-2xl border border-green-500/30 shadow-lg relative overflow-hidden transform hover:scale-105 transition duration-300">
+                            <div class="absolute top-0 right-0 bg-green-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">New</div>
+                            <div class="mb-4">
+                                <i class="fa-brands fa-android text-4xl text-green-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Android Version</h3>
+                            <p class="text-gray-400 text-xs mb-4">For Mobile & Tablet</p>
+                            <div class="text-3xl font-bold text-white mb-2">
+                                190,000 <span class="text-sm font-normal text-gray-500">MMK</span>
+                            </div>
+                            <p class="text-brand-muted text-[10px] uppercase tracking-wider mb-6">Lifetime License</p>
+                            <a href="#contact" class="block w-full py-3 bg-green-600 hover:bg-green-700 text-white text-center rounded-lg font-bold transition">
+                                ဝယ်ယူရန်
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
